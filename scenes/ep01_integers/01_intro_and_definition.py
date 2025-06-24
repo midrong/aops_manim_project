@@ -31,7 +31,7 @@ class BirthOfExponents(Scene):
         self.add(stars)
         
         # 【代码修正】从本地的assets文件夹加载我们下载好的图片
-        star_map = ImageMobject("assets/ep01/star_map_background.png") 
+        star_map = ImageMobject("assets/ep01/star_map_background_real.png")
         star_map.set_opacity(0.3)
         self.play(FadeIn(star_map))
 
