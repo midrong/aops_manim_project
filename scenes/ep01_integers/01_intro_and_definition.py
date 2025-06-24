@@ -88,8 +88,8 @@ class AtlantisExponentStory(Scene):
         
         # Glowing effect for active symbols
         self.play(
-            symbol_25.animate.set_color(BRIGHT_YELLOW),
-            symbol_34.animate.set_color(BRIGHT_YELLOW),
+            symbol_25.animate.set_color(YELLOW),
+            symbol_34.animate.set_color(YELLOW),
             run_time=1
         )
         
@@ -122,7 +122,7 @@ class AtlantisExponentStory(Scene):
         self.wait(1)
         
         # Transform to exponent notation
-        exponent_expr = MathTex("2^5", color=BRIGHT_YELLOW, font_size=60)
+        exponent_expr = MathTex("2^5", color=YELLOW, font_size=60)
         
         # Create transformation animation
         self.play(
@@ -210,7 +210,7 @@ class AtlantisExponentStory(Scene):
         )
         
         # Show the rule
-        rule = MathTex("a^m \\cdot a^n = a^{m+n}", color=BRIGHT_YELLOW, font_size=48)
+        rule = MathTex("a^m \\cdot a^n = a^{m+n}", color=YELLOW, font_size=48)
         rule.shift(DOWN * 3)
         self.play(Write(rule))
         self.wait(2)
@@ -221,7 +221,7 @@ class AtlantisExponentStory(Scene):
         division_demo = MathTex("\\frac{2^5}{2^2} = 2^{5-2} = 2^3", color=YELLOW, font_size=48)
         self.play(Write(division_demo))
         
-        division_rule = MathTex("\\frac{a^m}{a^n} = a^{m-n}", color=BRIGHT_YELLOW, font_size=48)
+        division_rule = MathTex("\\frac{a^m}{a^n} = a^{m-n}", color=YELLOW, font_size=48)
         division_rule.shift(DOWN * 2)
         self.play(Write(division_rule))
         self.wait(2)
@@ -274,7 +274,7 @@ class AtlantisExponentStory(Scene):
         self.play(Create(connection_line))
         
         # Final revelation
-        revelation = MathTex("2^0 = 1", color=BRIGHT_YELLOW, font_size=64)
+        revelation = MathTex("2^0 = 1", color=YELLOW, font_size=64)
         revelation.shift(DOWN * 3)
         self.play(Write(revelation))
         
@@ -330,7 +330,7 @@ class AtlantisExponentStory(Scene):
         self.play(Write(deduction_text))
         
         # Final answer
-        answer = MathTex("3^{-2} = \\frac{1}{3^2} = \\frac{1}{9}", color=BRIGHT_YELLOW, font_size=48)
+        answer = MathTex("3^{-2} = \\frac{1}{3^2} = \\frac{1}{9}", color=YELLOW, font_size=48)
         answer.shift(DOWN * 2.5)
         self.play(Write(answer))
         
@@ -346,11 +346,11 @@ class AtlantisExponentStory(Scene):
         
         # All the symbols now glowing
         symbols = VGroup(
-            MathTex("2^5", color=BRIGHT_YELLOW, font_size=36),
-            MathTex("3^4", color=BRIGHT_YELLOW, font_size=36),
-            MathTex("a^0 = 1", color=BRIGHT_YELLOW, font_size=32),
-            MathTex("a^{-n} = \\frac{1}{a^n}", color=BRIGHT_YELLOW, font_size=28),
-            MathTex("a^m \\cdot a^n = a^{m+n}", color=BRIGHT_YELLOW, font_size=28)
+            MathTex("2^5", color=YELLOW, font_size=36),
+            MathTex("3^4", color=YELLOW, font_size=36),
+            MathTex("a^0 = 1", color=YELLOW, font_size=32),
+            MathTex("a^{-n} = \\frac{1}{a^n}", color=YELLOW, font_size=28),
+            MathTex("a^m \\cdot a^n = a^{m+n}", color=YELLOW, font_size=28)
         )
         
         # Position symbols around the map
