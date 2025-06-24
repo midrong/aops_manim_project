@@ -1,4 +1,4 @@
-rom manim import *
+from manim import *
 import numpy as np
 
 class AtlantisExponentStory(Scene):
