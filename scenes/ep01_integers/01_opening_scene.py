@@ -105,7 +105,7 @@ def create_procedural_star_map() -> VGroup:
     mystical_shapes.add(center_circle, inner_circle, cross_h, cross_v)
     rune_positions = [LEFT*4 + UP*3, RIGHT*4 + UP*3, LEFT*4 + DOWN*2.5, RIGHT*4 + DOWN*2.5]
     rune_texts = ["✦", "✧", "✩", "✪"]
-    for pos, rune in zip(rune_positions, rune_texts):
+    for pos, rune in zip(rune_texts, rune_texts):
         runic_symbols.add(Text(rune, font_size=36, color=GOLD_C, fill_opacity=0.7).move_to(pos))
     star_map_group.add(constellation_lines, bright_stars, mystical_shapes, runic_symbols)
     star_map_group.set_opacity(0.4)
@@ -148,6 +148,7 @@ class OpeningScene(Scene):
         create_dialogue("Elara (大师)", "它一直在等待，凯。等待能读懂它语言的人。\n这语言，就是数学...", BLUE_B, self)
         
         print("🎬 准备场景转换...")
-        self.play(self.camera.frame.animate.scale(0.6).move_to(symbol1), FadeOut(symbol2), FadeOut(star_map, run_time=2), stars.animate.set_opacity(0.1), run_time=3)
+        # 【代码修正】使用新版Manim的相机动画语法
+        self.play(self.camera.animate.scale(0.6).move_to(symbol1), FadeOut(symbol2), FadeOut(star_map, run_time=2), stars.animate.set_opacity(0.1), run_time=3)
         self.wait(2)
         print("✅ 开场场景完成")
